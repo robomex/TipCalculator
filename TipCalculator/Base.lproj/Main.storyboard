@@ -48,31 +48,35 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iWL-Z7-Tcy"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4L-km-p0v">
-                                <rect key="frame" x="20" y="187" width="440" height="288"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="31l-9Y-tvn">
+                                <rect key="frame" x="0.0" y="187" width="580" height="293"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="580" id="ADa-Rb-Mqx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="9Aw-nb-dfW"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="aPh-Xy-E9d"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="r1B-MX-bTc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="3qc-42-hD1"/>
                             <constraint firstItem="Lu7-v0-pT2" firstAttribute="leading" secondItem="w3W-Eu-zkf" secondAttribute="trailing" constant="13" id="5dG-iC-lAN"/>
+                            <constraint firstItem="7px-CF-sST" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7oP-Xo-cxQ"/>
                             <constraint firstItem="7px-CF-sST" firstAttribute="top" secondItem="xic-ZW-x25" secondAttribute="bottom" constant="8" symbolic="YES" id="8G3-Fd-y3F"/>
+                            <constraint firstAttribute="bottom" secondItem="31l-9Y-tvn" secondAttribute="bottom" id="BJx-IW-Jm7"/>
                             <constraint firstItem="Lu7-v0-pT2" firstAttribute="trailing" secondItem="xic-ZW-x25" secondAttribute="trailing" id="Fg0-Dp-3jg"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="H4L-km-p0v" secondAttribute="bottom" constant="5" id="KoW-iU-zNH"/>
-                            <constraint firstAttribute="trailing" secondItem="Lu7-v0-pT2" secondAttribute="trailing" constant="20" symbolic="YES" id="M3a-t9-UH9"/>
                             <constraint firstItem="r1B-MX-bTc" firstAttribute="bottom" secondItem="xic-ZW-x25" secondAttribute="bottom" id="NeJ-CM-zee"/>
-                            <constraint firstItem="r1B-MX-bTc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="OWq-sJ-ecv"/>
                             <constraint firstItem="Lu7-v0-pT2" firstAttribute="bottom" secondItem="w3W-Eu-zkf" secondAttribute="bottom" id="PLq-Ia-C9y"/>
-                            <constraint firstItem="H4L-km-p0v" firstAttribute="top" secondItem="7px-CF-sST" secondAttribute="bottom" constant="8" symbolic="YES" id="VGD-rI-bRX"/>
+                            <constraint firstAttribute="trailing" secondItem="Lu7-v0-pT2" secondAttribute="trailing" constant="20" symbolic="YES" id="Uhn-da-MK3"/>
                             <constraint firstItem="Lu7-v0-pT2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="VtL-Lz-9mJ"/>
                             <constraint firstItem="xic-ZW-x25" firstAttribute="top" secondItem="Lu7-v0-pT2" secondAttribute="bottom" constant="9" id="jdX-6u-bXl"/>
                             <constraint firstItem="Lu7-v0-pT2" firstAttribute="leading" secondItem="xic-ZW-x25" secondAttribute="leading" id="kBP-iB-Rlw"/>
-                            <constraint firstItem="H4L-km-p0v" firstAttribute="centerX" secondItem="7px-CF-sST" secondAttribute="centerX" id="lbf-8G-mwE"/>
-                            <constraint firstItem="H4L-km-p0v" firstAttribute="leading" secondItem="r1B-MX-bTc" secondAttribute="leading" id="psb-Jf-VEw"/>
-                            <constraint firstItem="xic-ZW-x25" firstAttribute="trailing" secondItem="H4L-km-p0v" secondAttribute="trailing" id="uo6-IS-W8b"/>
+                            <constraint firstItem="31l-9Y-tvn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lKj-F5-vIl"/>
+                            <constraint firstItem="31l-9Y-tvn" firstAttribute="top" secondItem="7px-CF-sST" secondAttribute="bottom" constant="8" symbolic="YES" id="tbp-iq-Ilh"/>
                             <constraint firstItem="r1B-MX-bTc" firstAttribute="trailing" secondItem="w3W-Eu-zkf" secondAttribute="trailing" id="yOt-hp-3SN"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -82,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="ChB-S4-1hi"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="H4L-km-p0v" id="vgT-ur-gJq"/>
+                        <outlet property="tableView" destination="31l-9Y-tvn" id="Tgi-8f-tVh"/>
                         <outlet property="taxPctLabel" destination="r1B-MX-bTc" id="xt3-SB-Iom"/>
                         <outlet property="taxPctSlider" destination="xic-ZW-x25" id="Snh-Yg-560"/>
                         <outlet property="totalTextField" destination="Lu7-v0-pT2" id="MLF-wM-NQA"/>
