@@ -36,6 +36,8 @@
 		DE908F14196583F600680662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE908F15196583F600680662 /* TipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorTests.swift; sourceTree = "<group>"; };
 		DE908F1F1965849C00680662 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
+		DE9CC445196A5A900064DDBD /* RayWenderlichTut3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = RayWenderlichTut3.playground; path = "../../Swift Tutorial/RayWenderlichTut3.playground"; sourceTree = "<group>"; };
+		DE9CC446196A610C0064DDBD /* protocolPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = protocolPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				DE908F1F1965849C00680662 /* TipCalculatorModel.swift */,
+				DE9CC445196A5A900064DDBD /* RayWenderlichTut3.playground */,
+				DE9CC446196A610C0064DDBD /* protocolPlayground.playground */,
 				DE908EFF196583F600680662 /* TipCalculator */,
 				DE908F12196583F600680662 /* TipCalculatorTests */,
 				DE908EFE196583F600680662 /* Products */,
@@ -401,6 +405,7 @@
 				DE908F1B196583F600680662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE908F1C196583F600680662 /* Build configuration list for PBXNativeTarget "TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				DE908F1E196583F600680662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
